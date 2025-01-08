@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tomdevai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100;400;700&display=swap" />
+  
+  </head>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: black;
+      background-color: #d7e5e2;
+    }
+
+
+/* Gaya untuk tombol dark mode */
+.darkmode {
+  -webkit-tap-highlight-color: transparent; 
+}
+
+/* Gaya untuk container dan header */
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  padding: 20px;
+  background-color: ;
+  }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Gaya untuk profil */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover; /* Agar gambar tetap proporsional */
+  box-shadow: 1px 1px 1px #bebebe, -1px -1px 1px #ffffff;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.profile-info .subtitle {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.header h1 {
+  font-size: 15px;
+  font-family: 'Orbitron', sans-serif;
+  color: #333;
+  margin-top: -40px;
+}
+
+.fas.fa-check-circle {
+  font-size: 15px;
+  color: #007bff;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+/* Gaya untuk tanggal dan waktu */
+.date-time {
+  font-size: 9px;
+  font-family: 'Orbitron', sans-serif;
+  color: 0;
+  margin-top: -30px;
+  margin-left: 31%;
+  font-weight: bold;
+}
+
+/* Gaya tombol geser */
+.darkmode {
+  width: 26px;
+  height: 12px;
+  background-color: gray;
+  border-radius: 30px;
+  position: relative;
+  margin-right: -10%;
+  margin-top: -65px;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.darkmode .toggle-circle {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.darkmode.active {
+  background-color: #16181b;
+  border: 1px solid red;
+  
+}
+
+.darkmode.active .toggle-circle {
+  background-color: #41ff3c;
+}
+@keyframes blink-colors {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: blue;
+  }
+  66% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.darkmode.active .toggle-circle {
+  left: 15px;
+  background-color: #41ff3c; 
+  animation: blink-colors 1.3s infinite;
+}
+
+
+/* Gaya untuk mode gelap */
+body.dark-mode {
+  background-color: #121212;
+  color: #41ff3c;
+}
+
+body.dark-mode .header h1 {
+  color: #fff;
+}
+
+.darkmode-label {
+  font-size: 8px; 
+  color: #888;
+  text-align: center; 
+  margin-top: 12px; 
+}
+
+
+#halaman1 {
+  padding: 13px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+}
+
+#halaman1 h1 {
+  font-size: 12px;
+  margin-top: -10px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: left; 
+}
+
+#halaman1 p {
+  font-size: 12px;
+  margin-bottom: -5px;
+  text-align: left; 
+
+}
+
+#halaman1 .form-control {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+/* halaman2*/
+#halaman2 {
+    font-family: Arial, sans-serif;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 13px;
+}
+
+#halaman2 h1 {
+  font-size: 18px;
+  margin-top: -20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#halaman2 p {
+  font-size: 12px;
+}
+
+
+/* Icon menu Navigasi text*/
+    nav.top-menu {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 0px;
+      padding: 10px 0;
+    }
+
+    .menu-item {
+      color: ;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-item i {
+      font-size: 20px;
+      margin-bottom: 5px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .menu-item i:active {
+      transform: scale(1.2);
+      color: #ff6347;
+    }
+
+    .menu-item span {
+      font-size: 9px;
+      margin-top: 5px;
+      pointer-events: none;
+    }
+
+    .content {
+      padding: 20px;
+      display: none;
+    }
+
+    .content h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .content p {
+      font-size: 16px;
+    }
+
+    /* Profil menu */
+    #menu-profil {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      background-color: #444;
+      color: white;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    #menu-profil h2 {
+      margin-bottom: 20px;
+    }
+
+    #menu-profil .profil-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #menu-profil .profil-foto {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    #menu-profil .profil-nama {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #menu-profil .profil-email {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    #menu-profil ul {
+      list-style: none;
+    }
+
+    #menu-profil ul li {
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    #menu-profil ul li:hover {
+      color: #ff6347;
+    }
+    
+ /* Hilangkan efek klik bawaan smartphone */
+    a, button, .menu-item {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+
+
+
+
+
+
+
+
+#Ai {
+  padding: 13px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+}
+#Ai h1 {
+  font-size: 12px;
+  margin-top: -10px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: left; 
+}
+
+#Ai p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-align: left; 
+
+}
+
+    .promptBox {
+      width: 100%;
+      height: 95px;
+      padding: 5px;
+      margin-bottom: 5px;
+      border: 1px solid #03b90a;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    
+    /* Gaya Loader */
+    .loader {
+      display: none;
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid #03b90a;
+      width: 25px;
+      height: 25px;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Gaya Output */
+    #image-container img {
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!-- JUDUL -->
+<div class="container">
+  <div class="header">
+    <div class="profile">
+      <img src="https://iili.io/2CHtVnt.md.jpg" alt="Foto Profil" class="profile-picture">
+      <div class="profile-info">
+        <p class="digital-text">
+        <h1>Tommy Web-APS <i class="fas fa-check-circle"></i>
+        
+        <p class="subtitle">Web Developer & Designer</p>
+
+      </div>
+    </div>
+    <div class="darkmode" id="darkModeToggle">
+      <div class="toggle-circle"></div>
+      <p class="darkmode-label">mode</p>
+    </div>
+  </div>
+</div>
+    <div id="timeContainer">
+      <p id="dateTime" class="date-time"></p>
+    </div>
+    
+    <!-- Menu Navigasi -->
+    <nav class="top-menu">
+      <div class="menu-item" data-target="#Ai">
+        <i class="fab fa-studiovinari"></i>
+        <span>Creatr Ai</span>
+      </div>
+
+   
+      <div class="menu-item" data-target="#halaman1">
+        <i class="fab fa-gg"></i>
+        <span>Creatr Ai 2</span>
+      </div>
+      
+      
+<div class="menu-item" id="keyboardLink">
+  <i class="far fa-keyboard"></i>
+  <span>Keyboard ASCII</span>
+</div>
+
+<div class="menu-item" id="developerLink">
+  <i class="fab fa-dev"></i>
+  <span>Developer</span>
+</div>
+
+      <div class="menu-item" data-target="#halaman5">
+        <i class="fab fa-old-republic"></i>
+        <span>Pengaturan</span>
+      </div>
+    </nav>
+ <hr>
+
+<div id="content-container" style="
+  display: block; 
+  max-height: 500px; 
+  overflow-y: auto;">
+
+      
+    <!-- Konten -->
+<section id="Ai" class="content">
+  <h1>TM Image Ai</h1>
+  <p>Masukkan teks berdasarkan imajinasi atau apa yang ingin Anda buat </p>
+
+  <div class="generator">
+    <div class="input">
+      <!-- Input teks sebagai kotak teks -->
+      <textarea class="promptBox" id="prompt" placeholder="Masukkan prompt di sini..."></textarea>
+    </div>
+
+    <button 
+      id="generate" 
+      style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px; width:150px; height: 30px; cursor: pointer; margin-top: -10px; font-weight: bold;">
+      Generate Images
+    </button>
+
+    <div class="loader" id="loading-spinner"></div>
+    <div class="output">
+      <h2 id="generatedText" style="font-size: 15px; margin-top: 5px;">Generated Images:</h2>
+      <div id="image-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;"></div>
+      <a id="dlButton" href="#" download style="display: none;">Download</a>
+    </div>
+  </div>
+
+  <div id="preset-images" style="margin-top: 30px;">
+    <h3 style="font-size: 12px;">Gambar Preset klik untuk buat</h3>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+      <div>
+        <img 
+          src="https://iili.io/2S9pr8v.md.jpg" 
+          alt="Glowing Goldfish" 
+          data-description="Create images of glowing goldfish with morning dew seaweed and crystal roses with white neon light. Beautiful Korean mermaid woman dressed in Real HD realistic batik sitting on very big and beautiful flowers" 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Glowing Goldfish</p>
+      </div>
+      <div>
+        <img 
+          src="https://iili.io/2SJKczb.md.jpg" 
+          alt="Beautiful Mermaid" 
+          data-description="beautiful owl with long colorful feathers, perched on a cherry tree, with a snow mountain as a background, a cool view with the light of the wind flowing beautiful neon colors" 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Beautiful Mermaid</p>
+      </div>
+            <div>
+                <img 
+          src="https://iili.io/2UmAAJf.md.jpg" 
+          alt="Morning Dew" 
+          data-description="beautiful Korean mermaid, underwater view filled with coral, seaweed, sand, colorful glass, Koi fish (Cyprinus carpio), Discus fish (Symphysodon spp.), Guppy fish (Poecilia reticulata) Betta fish (Betta splendens), lively comet fish (Carassius auratus), and gentle sea turtles" 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Morning Dew</p>
+      </div>
+      <div>
+        <img 
+          src="https://iili.io/2SqLNDv.md.jpg" 
+          alt="Morning Dew" 
+          data-description="a beautiful Korean woman, with long wings like a butterfly with colorful patterns, with flowing neon sand light, very beautiful, sky garden background" 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Morning Dew</p>
+      </div>
+      
+      
+           <div>
+              <img 
+          src="https://iili.io/2UmYAE7.md.jpg" 
+          alt="Crystal Roses" 
+          data-description="A queen was at the door of the Boro Budur temple palace, escorted by the guards" 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Crystal Roses</p>
+      </div>
+          <div>
+              <img 
+          src="https://iili.io/2UmcJfI.md.jpg" 
+          alt="Crystal Roses" 
+          data-description="Wanita korea cyborg berbadan robot, dengan teknologi. sedang mengetik komputer dengan tampilan programmer seperti radar dan cahaya mengalirkan neon dan tulisan di komputer" 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Crystal Roses</p>
+      </div>
+          <div>
+              <img 
+          src="https://iili.io/2UmjO0J.th.jpg" 
+          alt="Crystal Roses" 
+          data-description="Seorang wanita cantik korea berhijab berpakaian batik tiga peniti kain sulam, di belakangnya ada kursi panjang dan pohon sakura, dan sekitarnya ada taman bunga warna-warni berbentuk bundaran melingkari." 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Crystal Roses</p>
+      </div>
+           <div>
+              <img 
+          src="https://iili.io/2SJLcg4.md.jpg" 
+          alt="Crystal Roses" 
+          data-description="A majestic phoenix is reborn from digital ashes in a holographic blaze of shiny iron nickel wings, giving rise to a beautiful Korean woman wearing a singlet tactical pants tactical boots with a crystal clear ultra-real power light" 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Crystal Roses</p>
+      </div>
+    </div>
+        <img 
+          src="https://iili.io/2Umrxus.md.jpg" 
+          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Crystal Roses</p>
+      </div>
+     </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const generateButton = document.getElementById("generate");
+  const promptInput = document.getElementById("prompt");
+  const imageContainer = document.getElementById("image-container");
+  const loadingSpinner = document.getElementById("loading-spinner");
+  const genText = document.getElementById("generatedText");
+
+  function generateImages(description) {
+    imageContainer.innerHTML = ""; // Kosongkan kontainer gambar
+    loadingSpinner.style.display = "block";
+    genText.style.display = "none";
+    generateButton.disabled = true;
+
+    const generateImageUrl = (seed) =>
+      `https://image.pollinations.ai/prompt/${encodeURIComponent(description)}?nologo=1&seed=${seed}`;
+
+    const imageCount = 4;
+    let imagesLoaded = 0;
+
+    for (let i = 0; i < imageCount; i++) {
+      const randomSeed = Math.floor(Math.random() * 1000000000);
+      const imageUrl = generateImageUrl(randomSeed);
+      const image = document.createElement("img");
+      image.setAttribute("alt", "Generated Image");
+      image.style.width = "100%";
+      image.style.height = "auto";
+      image.style.cursor = "pointer";
+      image.style.border = "1px solid #ddd";
+      image.style.borderRadius = "8px";
+
+      image.onload = function () {
+        imagesLoaded++;
+        if (imagesLoaded === imageCount) {
+          loadingSpinner.style.display = "none";
+          genText.style.display = "block";
+          generateButton.disabled = false;
+        }
+      };
+
+      image.onerror = function () {
+        alert("Gagal memuat salah satu gambar. Silakan coba lagi.");
+        loadingSpinner.style.display = "none";
+        generateButton.disabled = false;
+      };
+
+      image.src = imageUrl;
+
+      image.addEventListener("click", function () {
+        window.open(imageUrl, "_blank");
+      });
+
+      imageContainer.appendChild(image);
+    }
+  }
+
+  generateButton.addEventListener("click", function () {
+    const description = promptInput.value || "beautiful landscape";
+    generateImages(description);
+  });
+
+  // Event listener untuk gambar preset
+  const presetImages = document.querySelectorAll("#preset-images img");
+  presetImages.forEach((image) => {
+    image.addEventListener("click", function () {
+      const description = this.getAttribute("data-description");
+      generateImages(description);
+    });
+  });
+});
+// Tambahkan event listener untuk masing-masing elemen
+document.getElementById("keyboardLink").addEventListener("click", function() {
+  window.open("https://tommydev27.github.io/devai/", "_blank");
+});
+
+document.getElementById("developerLink").addEventListener("click", function() {
+  window.open("https://tommydev27.github.io/devaii/", "_blank");
+});
+
+
+</script>
+    </section>
+    
+    
+    
+ <section id="halaman1" class="content">
+      <h1>Tab Unique Characters</h1>
+        <p>Buat kreasi unik dengan text Characters</p>
+        </h1>
+        
+<style>
+    .unique-image-container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    img.unique-generated-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    input[type="text"], select, button {
+        margin: 5px 0;
+        width: 100%;
+        padding: 5px;
+        font-size: 13px;
+    }
+    button.unique-generate-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: 2px solid #3e8e41;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button.unique-save-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: 2px solid #3e8e41;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button.unique-generate-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Gaya Loader */
+    .loader {
+      display: none;
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid #03b90a;
+      width: 25px;
+      height: 25px;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+</style>
+</head>
+<body class="unique-page">
+    <div class="unique-container">
+        <div class="unique-image-container">
+            <img id="uniqueGeneratedImage" class="unique-generated-image" alt="" />
+        </div>
+            <div id="loader" class="loader"></div> <!-- Loader added here -->
+        <div class="scroll-container">
+            <textarea id="uniquePromptInput" class="unique-prompt-input" placeholder="Masukan prompt di sini..." style="padding: 10px; font-size: 14px; width: 100%; height: 70px; border-radius: 5px; border: 1px solid #ccc; margin: 10px 0; text-align: left; vertical-align: top; resize: none;
+                border: 1px solid #03b90a;"></textarea>
+
+            <!-- Size Controls -->
+            <div>
+                <label for="uniqueHeightInput" style="font-size: 13px;">Select Image Height</label>
+                <select id="uniqueHeightInput" class="unique-height-input">
+                    <option value="400">400px</option>
+                    <option value="500">500px</option>
+                    <option value="600">600px</option>
+                    <option value="700">700px</option>
+                    <option value="800">800px</option>
+                </select>
+            </div>
+
+            <button id="uniqueGenerateBtn" class="unique-generate-btn">Generate Image</button>
+            <button id="uniqueSaveBtn" class="unique-save-btn" disabled>Save Image</button>
+        </div>
+    </div>
+
+    <script>
+        const promptInput = document.getElementById("uniquePromptInput");
+        const heightInput = document.getElementById("uniqueHeightInput");
+        const generateBtn = document.getElementById("uniqueGenerateBtn");
+        const saveBtn = document.getElementById("uniqueSaveBtn");
+        const generatedImage = document.getElementById("uniqueGeneratedImage");
+        const loader = document.getElementById("loader");
+
+        function generateImage() {
+            const description = promptInput.value.trim();
+            const height = parseInt(heightInput.value);
+
+            if (!description) {
+                alert("Please enter a description for the image.");
+                return;
+            }
+
+            const width = 400;  // Fixed width
+
+            // Show the loader
+            loader.style.display = 'block';
+
+            // Generate a random seed to ensure image variation
+            const seed = Math.floor(Math.random() * 1000000);  // Random seed value
+
+            // Generate the URL with the prompt, seed, and height
+            const generateImageUrl = (seed, width, height) =>
+                `https://image.pollinations.ai/prompt/${encodeURIComponent(description)}?nologo=1&seed=${seed}&width=${width}&height=${height}`;
+
+            // Update the image source with the new generated URL
+            generatedImage.src = generateImageUrl(seed, width, height);
+
+            // Enable the save button once the image is generated
+            saveBtn.disabled = false;
+
+            // Hide the loader once the image is loaded
+            generatedImage.onload = () => {
+                loader.style.display = 'none';
+            };
+        }
+
+        function saveImage() {
+            const link = document.createElement('a');
+            link.href = generatedImage.src;
+            link.download = 'generated_image.png';
+            link.click();
+        }
+
+        generateBtn.addEventListener("click", generateImage);
+        saveBtn.addEventListener("click", saveImage);
+    </script>
+</section>
+
+
+
+<section id="halaman2" class="content">
+    <h1>ASCII Art image</h1>
+    <p>Tambahkan teman baru dari halaman ini.</p>
+
+  </section>
+
+
+
+
+    
+    <!-- Profile -->
+    <section id="halaman5" class="content">
+      <div id="menu-profil">
+        <h2>Profil</h2>
+        <div class="profil-info">
+          <img src="https://via.placeholder.com/100" alt="Foto Profil" class="profil-foto">
+          <p class="profil-nama">Tommy</p>
+          <p class="profil-email">tommywebsite.com</p>
+        </div>
+        <ul>
+          <li>Detail Akun</li>
+          <li>Privasi</li>
+          <li>Keluar</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Script untuk navigasi
+    const menuItems = document.querySelectorAll('.menu-item');
+    const contents = document.querySelectorAll('.content');
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const target = document.querySelector(item.dataset.target);
+        contents.forEach(content => content.style.display = 'none');
+        target.style.display = 'block';
+      });
+    });
+
+    // Menampilkan Halaman 1 secara default
+    contents.forEach(content => content.style.display = 'none');
+    document.querySelector('#Ai').style.display = 'block';
+
+    // Profil menu toggle
+    const pengaturanItem = document.querySelector('[data-target="#halaman5"]');
+    const menuProfil = document.getElementById('menu-profil');
+
+    pengaturanItem.addEventListener('click', () => {
+      if (menuProfil.style.left === '0px') {
+        menuProfil.style.left = '-300px';  // Menutup menu
+      } else {
+        menuProfil.style.left = '0px';  // Menampilkan menu
+      }
+    });
+    
+    
+// Darkmode
+    const toggle = document.getElementById("darkModeToggle");
+
+toggle.addEventListener("click", function () {
+
+  this.classList.toggle("active");
+  
+
+  document.body.classList.toggle("dark-mode");
+});
+
+  // TIME
+function updateDateTime() {
+  const dateTimeElement = document.getElementById("dateTime");
+  
+  // Opsi format hari, tanggal, dan waktu
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  };
+
+  // Ambil waktu saat ini
+  const now = new Date();
+  const formattedDate = now.toLocaleDateString("id-ID", options);
+
+  // Tampilkan waktu
+  dateTimeElement.textContent = formattedDate;
+}
+
+// Perbarui waktu setiap detik
+setInterval(updateDateTime, 1000);
+
+// Inisialisasi pertama kali
+updateDateTime();
+
+    
+  </script>
+
+
+</body>
+</html>
