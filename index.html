@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="TomDevAi - AI Image Creator">
-<meta property="og:description" content="Create stunning AI-generated images with ease using TomDevAi.">
+<meta property="og:title" content="Tommy APPS">
+<meta property="og:description" content="Create stunning AI-generated images with ease using Tommy APPS.">
 <meta property="og:image" content="https://iili.io/24TAJ6b.md.jpg">
 <meta property="og:url" content="https://tommydev27.github.io/AI-Image-Creator/">
 <meta property="og:type" content="website">
 <meta property="fb:app_id" content="1254856955743242">
-  <title>tomdevai</title>
+  <title>tommy-APPS</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -342,7 +343,7 @@ body.dark-mode .header h1 {
 
 
   </style>
-</head>
+
 <body>
 
 <!-- JUDUL -->
@@ -352,9 +353,11 @@ body.dark-mode .header h1 {
       <img src="https://iili.io/2CHtVnt.md.jpg" alt="Foto Profil" class="profile-picture">
       <div class="profile-info">
         <p class="digital-text">
-        <h1>Tommy Web-APPS <i class="fas fa-check-circle"></i>
+        </p>
+<h1>Tommy Web-APPS <i class="fas fa-check-circle"></i>
         
-        <p class="subtitle">Web Developer & Designer</p>
+        </h1>
+<p class="subtitle">Web Developer &amp; Designer</p>
         
 <p class="subtitle" style="font-size: 12px">
   <span>︻</span><span style="color: #9d4801;">み</span><span style="color: #df052a;">✪</span><span style="color: #8d1105;">🝛</span><span>━━─────╼💥</span>
@@ -416,9 +419,7 @@ body.dark-mode .header h1 {
       <textarea class="promptBox" id="prompt" placeholder="Tulis prompt di sini..."></textarea>
     </div>
 
-    <button 
-      id="generate" 
-      style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px; width:150px; height: 30px; cursor: pointer; margin-top: -10px; font-weight: bold;">
+    <button id="generate" style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px; width:150px; height: 30px; cursor: pointer; margin-top: -10px; font-weight: bold;">
       Generate Images
     </button>
 
@@ -434,82 +435,47 @@ body.dark-mode .header h1 {
     <h3 style="font-size: 12px;">Gambar Preset klik untuk buat</h3>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
       <div>
-        <img 
-          src="https://iili.io/2S9pr8v.md.jpg" 
-          alt="Glowing Goldfish" 
-          data-description="Create images of glowing goldfish with morning dew seaweed and crystal roses with white neon light. Beautiful Korean mermaid woman dressed in Real HD realistic batik sitting on very big and beautiful flowers" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <img src="https://iili.io/2S9pr8v.md.jpg" alt="Glowing Goldfish" data-description="Create images of glowing goldfish with morning dew seaweed and crystal roses with white neon light. Beautiful Korean mermaid woman dressed in Real HD realistic batik sitting on very big and beautiful flowers" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
       </div>
       <div>
-        <img 
-          src="https://iili.io/2SJKczb.md.jpg" 
-          alt="Beautiful Mermaid" 
-          data-description="beautiful owl with long colorful feathers, perched on a cherry tree, with a snow mountain as a background, a cool view with the light of the wind flowing beautiful neon colors" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <img src="https://iili.io/2SJKczb.md.jpg" alt="Beautiful Mermaid" data-description="beautiful owl with long colorful feathers, perched on a cherry tree, with a snow mountain as a background, a cool view with the light of the wind flowing beautiful neon colors" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
       </div>
             <div>
-                <img 
-          src="https://iili.io/2UmAAJf.md.jpg" 
-          alt="Morning Dew" 
-          data-description="beautiful Korean mermaid, underwater view filled with coral, seaweed, sand, colorful glass, Koi fish (Cyprinus carpio), Discus fish (Symphysodon spp.), Guppy fish (Poecilia reticulata) Betta fish (Betta splendens), lively comet fish (Carassius auratus), and gentle sea turtles" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+                <img src="https://iili.io/2UmAAJf.md.jpg" alt="Morning Dew" data-description="beautiful Korean mermaid, underwater view filled with coral, seaweed, sand, colorful glass, Koi fish (Cyprinus carpio), Discus fish (Symphysodon spp.), Guppy fish (Poecilia reticulata) Betta fish (Betta splendens), lively comet fish (Carassius auratus), and gentle sea turtles" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
       </div>
       <div>
-        <img 
-          src="https://iili.io/2SqLNDv.md.jpg" 
-          alt="Morning Dew" 
-          data-description="a beautiful Korean woman, with long wings like a butterfly with colorful patterns, with flowing neon sand light, very beautiful, sky garden background" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <img src="https://iili.io/2SqLNDv.md.jpg" alt="Morning Dew" data-description="a beautiful Korean woman, with long wings like a butterfly with colorful patterns, with flowing neon sand light, very beautiful, sky garden background" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
       </div>
       
       
            <div>
-              <img 
-          src="https://iili.io/2UmYAE7.md.jpg" 
-          alt="Crystal Roses" 
-          data-description="A queen was at the door of the Boro Budur temple palace, escorted by the guards" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+              <img src="https://iili.io/2UmYAE7.md.jpg" alt="Crystal Roses" data-description="A queen was at the door of the Boro Budur temple palace, escorted by the guards" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
       </div>
           <div>
-              <img 
-          src="https://iili.io/2UmcJfI.md.jpg" 
-          alt="Crystal Roses" 
-          data-description="Wanita korea cyborg berbadan robot, dengan teknologi. sedang mengetik komputer dengan tampilan programmer seperti radar dan cahaya mengalirkan neon dan tulisan di komputer" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+              <img src="https://iili.io/2UmcJfI.md.jpg" alt="Crystal Roses" data-description="Wanita korea cyborg berbadan robot, dengan teknologi. sedang mengetik komputer dengan tampilan programmer seperti radar dan cahaya mengalirkan neon dan tulisan di komputer" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
       </div>
           <div>
-              <img 
-          src="https://iili.io/2UmjO0J.th.jpg" 
-          alt="Crystal Roses" 
-          data-description="Seorang wanita cantik korea berhijab berpakaian batik tiga peniti kain sulam, di belakangnya ada kursi panjang dan pohon sakura, dan sekitarnya ada taman bunga warna-warni berbentuk bundaran melingkari." 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+              <img src="https://iili.io/2UmjO0J.th.jpg" alt="Crystal Roses" data-description="Seorang wanita cantik korea berhijab berpakaian batik tiga peniti kain sulam, di belakangnya ada kursi panjang dan pohon sakura, dan sekitarnya ada taman bunga warna-warni berbentuk bundaran melingkari." style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
       </div>
            <div>
-              <img 
-          src="https://iili.io/2SJLcg4.md.jpg" 
-          alt="Crystal Roses" 
-          data-description="A majestic phoenix is reborn from digital ashes in a holographic blaze of shiny iron nickel wings, giving rise to a beautiful Korean woman wearing a singlet tactical pants tactical boots with a crystal clear ultra-real power light" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+              <img src="https://iili.io/2SJLcg4.md.jpg" alt="Crystal Roses" data-description="A majestic phoenix is reborn from digital ashes in a holographic blaze of shiny iron nickel wings, giving rise to a beautiful Korean woman wearing a singlet tactical pants tactical boots with a crystal clear ultra-real power light" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
       </div>
     </div>
-        <img 
-          src="https://iili.io/2Umrxus.md.jpg" 
-            alt="Crystal Roses" 
-          data-description="bird" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <img src="https://iili.io/2Umrxus.md.jpg" alt="Crystal Roses" data-description="bird" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
 
       </div>
-     </div>
-  </div>
-</section>
+     </section>
+</div>
+  
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -592,14 +558,14 @@ presetImages.forEach((image) => {
 });
 
 </script>
-    </section>
+    
     
     
     
  <section id="halaman1" class="content">
       <h1>TM-AI</h1>
         <p>Buat Gambar dengan ukuran panjang atur sesuaikan</p>
-        </h1>
+        
         
 <style>
     .unique-image-container {
@@ -688,58 +654,31 @@ presetImages.forEach((image) => {
     
 </style>
 
-<body class="unique-page">
+
     <div class="unique-container">
     <!-- Konten yang sudah ada -->
 
     <!-- Slider untuk gambar kecil -->
     <div class="image-slider-container" style="margin-top: 20px;">
         <div class="image-slider">
-            <img src="https://iili.io/2rBCAcF.md.jpg" 
-                 alt="Gambar 1" 
-                 class="slider-image" 
-                 data-prompt="A hyper-realistic photo of a lush green forest with sunlight filtering through the trees, highly detailed textures, natural lighting, and sharp focus.
+            <img src="https://iili.io/2rBCAcF.md.jpg" alt="Gambar 1" class="slider-image" data-prompt="A hyper-realistic photo of a lush green forest with sunlight filtering through the trees, highly detailed textures, natural lighting, and sharp focus.
                   Chinese women's high-detail hair (Quality hair details: 1.1) Clear eyes, double eyelids look good, sharp eye makeup, Create the beauty of eyelash makeup, thin eyebrows, highly detailed eyes, sharp nose, beautiful red lips, rosy cheeks , With delicate makeup on her face, beautiful face, Perfectly proportional face shape, （Advanced facial details：1.1）A Chinese girl sits on a throne, the throne is inlaid with precious stones, surrounded by Chinese phoenix beasts, gold and color rubies, unique monster illustration, Dau al set, high resolution, bright realistic, super high resolution, complex, super detailed, (skin dent), cute, feminine, body details, ( Facial details: 1.1), (contoured iris), (perfect eyes), 4k, beautiful, (masterpiece: 1.2), (best quality: 1.2), beautiful closed long dress, dynamic pose, rich colors, light and shadow film, red and gold clothes, realism, my eyes are very bright, original picture. HD.">
-            <img src="https://iili.io/2rBfSKF.md.jpg" 
-                 alt="Gambar 2" 
-                 class="slider-image" 
-                 data-prompt="Create a hyper-realistic image of Spider-Man wearing a futuristic, shiny white robot suit, designed with intricate metallic details and glowing blue accents. He stands confidently in the foreground. Behind him, a large, highly detailed Transformer-like robot sits in a defensive pose, with a reflective metallic coating. The scene is set in a futuristic city at dusk, with warm and cool lighting providing realistic shading of the characters. Make sure textures, proportions and lighting are photorealistic">
+            <img src="https://iili.io/2rBfSKF.md.jpg" alt="Gambar 2" class="slider-image" data-prompt="Create a hyper-realistic image of Spider-Man wearing a futuristic, shiny white robot suit, designed with intricate metallic details and glowing blue accents. He stands confidently in the foreground. Behind him, a large, highly detailed Transformer-like robot sits in a defensive pose, with a reflective metallic coating. The scene is set in a futuristic city at dusk, with warm and cool lighting providing realistic shading of the characters. Make sure textures, proportions and lighting are photorealistic">
 
-            <img src="https://iili.io/2rUEPCg.md.jpg" 
-                 alt="Gambar 4" 
-                 class="slider-image" 
-                 data-prompt="beautiful Korean mermaid, underwater view filled with coral, seaweed, sand, colorful glass, Koi fish (Cyprinus carpio), Discus fish (Symphysodon spp.), Guppy fish (Poecilia reticulata) Betta fish (Betta splendens), lively comet fish (Carassius auratus), and gentle sea turtles">
+            <img src="https://iili.io/2rUEPCg.md.jpg" alt="Gambar 4" class="slider-image" data-prompt="beautiful Korean mermaid, underwater view filled with coral, seaweed, sand, colorful glass, Koi fish (Cyprinus carpio), Discus fish (Symphysodon spp.), Guppy fish (Poecilia reticulata) Betta fish (Betta splendens), lively comet fish (Carassius auratus), and gentle sea turtles">
                  
                  
                  
 
-               <img src="https://iili.io/2rQCD0l.md.jpg" 
-                 alt="Gambar 5" 
-                 class="slider-image" 
-                 data-prompt="A beautiful dance on ice featuring two enchanting fairies, dressed in glossy dresses, realistic and fantastical atmosphere, ethereal lighting, intricate details, whimsical background, soft glows, elegant poses, magical winter scenery">
+               <img src="https://iili.io/2rQCD0l.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="A beautiful dance on ice featuring two enchanting fairies, dressed in glossy dresses, realistic and fantastical atmosphere, ethereal lighting, intricate details, whimsical background, soft glows, elegant poses, magical winter scenery">
                  
 
-              <img src="https://iili.io/2rQ2LF9.md.jpg" 
-                 alt="Gambar 5" 
-                 class="slider-image" 
-                 data-prompt="a beautiful Korean woman, with long wings like a butterfly with colorful patterns, with flowing neon sand light, very beautiful, sky garden background">
-              <img src="https://iili.io/2rQJYwQ.md.jpg" 
-                 alt="Gambar 5" 
-                 class="slider-image" 
-                 data-prompt="fotorealistick, masterpiece, Highest quality, Very detailed, Japaese アンDroid girl,Portraiture,Plump,Thick,Control panel,アンDroid,Droid,Mechanical Hand, robotの腕と脚, Black Hair,Blunt bangs,perfect robot girl,Long tube,A thick cable was attached to her neck.,アンDroid,robot,humanoid,cyborg,japanese cyborg girl ,robot-assembly plant,She is now assembling,Assembly scene,Chubby,Squat">
+              <img src="https://iili.io/2rQ2LF9.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="a beautiful Korean woman, with long wings like a butterfly with colorful patterns, with flowing neon sand light, very beautiful, sky garden background">
+              <img src="https://iili.io/2rQJYwQ.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="fotorealistick, masterpiece, Highest quality, Very detailed, Japaese アンDroid girl,Portraiture,Plump,Thick,Control panel,アンDroid,Droid,Mechanical Hand, robotの腕と脚, Black Hair,Blunt bangs,perfect robot girl,Long tube,A thick cable was attached to her neck.,アンDroid,robot,humanoid,cyborg,japanese cyborg girl ,robot-assembly plant,She is now assembling,Assembly scene,Chubby,Squat">
                                     
-              <img src="https://iili.io/2rBeIcl.md.jpg" 
-                 alt="Gambar 3" 
-                 class="slider-image" 
-                 data-prompt="Create images of glowing goldfish with morning dew seaweed and crystal roses with white neon light. Beautiful Korean mermaid woman dressed in Real HD realistic batik sitting on very big and beautiful flowers">
-            <img src="https://iili.io/2rUJkJt.md.jpg" 
-                 alt="Gambar 5" 
-                 class="slider-image" 
-                 data-prompt="A realistic depiction of a Chinese noblewoman warrior in detailed traditional royal attire, wielding a sword with intricate engravings. She is unleashing a powerful whirlwind, surrounded by glowing neon-like streams of energy flowing naturally around her. Her expression is fierce yet composed, her hair flowing dynamically in the wind. The scene is highly detailed, with a realistic background of a misty battlefield or ancient courtyard, illuminated by the vibrant glow of her energy, emphasizing her mystical and powerful presence">
-              <img src="https://iili.io/2rLblne.md.jpg" 
-                 alt="Gambar 5" 
-                 class="slider-image" 
-                 data-prompt="photorealistick, korean women, ((( amazoness)))、Tribe、fashionable face paint、Tribal Body Paint、(Japanese Face)、((cute))、Smooth white skin、Exposed clothes、tribal costumes、dense forest background、20 year、women、cute、super detailed,((( realistic, photo realistic, photo-realistic :1.37))), high definition, high definition, Studio Lighting, Very Smooth Painting, sharp concentration, physically based rendering, highly detailed description, professional, bright colors, bokeh, cinematic lighting, Dramatic Shadows, real、">
+              <img src="https://iili.io/2rBeIcl.md.jpg" alt="Gambar 3" class="slider-image" data-prompt="Create images of glowing goldfish with morning dew seaweed and crystal roses with white neon light. Beautiful Korean mermaid woman dressed in Real HD realistic batik sitting on very big and beautiful flowers">
+            <img src="https://iili.io/2rUJkJt.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="A realistic depiction of a Chinese noblewoman warrior in detailed traditional royal attire, wielding a sword with intricate engravings. She is unleashing a powerful whirlwind, surrounded by glowing neon-like streams of energy flowing naturally around her. Her expression is fierce yet composed, her hair flowing dynamically in the wind. The scene is highly detailed, with a realistic background of a misty battlefield or ancient courtyard, illuminated by the vibrant glow of her energy, emphasizing her mystical and powerful presence">
+              <img src="https://iili.io/2rLblne.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="photorealistick, korean women, ((( amazoness)))、Tribe、fashionable face paint、Tribal Body Paint、(Japanese Face)、((cute))、Smooth white skin、Exposed clothes、tribal costumes、dense forest background、20 year、women、cute、super detailed,((( realistic, photo realistic, photo-realistic :1.37))), high definition, high definition, Studio Lighting, Very Smooth Painting, sharp concentration, physically based rendering, highly detailed description, professional, bright colors, bokeh, cinematic lighting, Dramatic Shadows, real、">
                  
             </div>
         </div>
@@ -767,13 +706,11 @@ presetImages.forEach((image) => {
 
             <button id="uniqueGenerateBtn" class="unique-generate-btn">Generate Image</button>
             <button id="uniqueSaveBtn" class="unique-save-btn" disabled>Save Image</button>
-        </div>
-         <img 
-          src="https://iili.io/2r1CUk7.md.jpg" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #03b90a; border-radius: 8px;">
+        
+         <img src="https://iili.io/2r1CUk7.md.jpg" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #03b90a; border-radius: 8px;">
            <p style="text-align: left; margin-top: 5px;">prompt:</p>
-        </div>
-    </div>
+        
+    
 
 <script>
     // Ambil elemen-elemen DOM
@@ -843,7 +780,7 @@ presetImages.forEach((image) => {
 
 <section id="halaman2" class="content">
     <h1>TM faceSwap</h1>
-    <p>Masukan Target Gambar Swap &
+    <p>Masukan Target Gambar Swap &amp;
 Pilih Wajah.</p>
       
     <style>
@@ -949,20 +886,18 @@ Pilih Wajah.</p>
     <input type="file" id="swapAI_image1" accept="image/*" style="display: none;">
     <input type="file" id="swapAI_image2" accept="image/*" style="display: none;">
 
-    <button id="swapAI_swapButton"style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px;  cursor: pointer; font-weight: bold;">Perform Face Swap</button>
+    <button id="swapAI_swapButton" style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px;  cursor: pointer; font-weight: bold;">Perform Face Swap</button>
     <button id="swapAI_saveButton">Save Result</button>
     <div class="loader" id="swapAI_loader"></div>
     <p id="swapAI_resultMessage"></p>
     <img id="swapAI_resultImage" src="" alt="Face swap result">
 
 
-        </div>
-           <img 
-          src="https://iili.io/2rGJE5g.md.jpg" 
-          style="width: 100%; height: auto; cursor: pointer; border: 1px solid #03b90a; border-radius: 8px;">
+        
+           <img src="https://iili.io/2rGJE5g.md.jpg" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #03b90a; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">Crystal Roses</p>
-      </div>
-    </div>
+      
+    
     
     <script>
         document.getElementById("swapAI_image1").addEventListener("change", function (event) {
@@ -1178,6 +1113,7 @@ updateDateTime();
 
     
   </script>
+
 
 
 </body>
